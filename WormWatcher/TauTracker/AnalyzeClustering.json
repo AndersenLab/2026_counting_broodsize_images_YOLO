@@ -1,0 +1,85 @@
+{
+    "data output": {
+        "x axis": "fname",
+        "pages": [
+            "N worms",
+            "N touching",
+            "N alone",
+            "Neighbor dist",
+            "fraction touching",
+            "fraction touching (from alone)"
+        ],
+        "x axis options": [
+            "time",
+            "fname"
+        ],
+        "pages options": [
+            "Lawn dist",
+            "Lawn dist indiv",
+            "Lawn dist medfilt",
+            "N worms",
+            "Neighbor dist",
+            "fraction touching",
+            "N touching",
+            "N alone",
+            "fraction touching (from alone)"
+        ]
+    },
+    "plots": {
+        "groups": {
+            "control": [
+                1
+            ],
+            "condition 1": [
+                3
+            ]
+        },
+        "sheets": [
+            "Lawn dist",
+            "N worms"
+        ],
+        "median kernel size": 9,
+        "time unit": "sec"
+    },
+    "plate": {
+        "analyze fluorescence frames": false,
+        "segment wells in first frame only": false,
+        "paths": {
+            "dark field": "C:/Users/erika/Desktop/Alejandra_20260319/_consolidated",
+            "fluo": "C:/Users/erika/Desktop/Alejandra_20260319/_consolidated"
+        },
+        "N wells": 6,
+        "Ideal worms per well": 50,
+        "Hough circles": {
+            "blur": 11,
+            "sensitivity": 10,
+            "canny thresh": 20,
+            "well diameter (pixels)": 1200,
+            "well spacing (fraction of diameter)": 1.0,
+            "dsfactor": 0.2,
+            "eliminate extra circles": true
+        },
+        "enforce well count": true,
+        "lawn": {
+            "enable": false
+        },
+        "main path key": "fluo"
+    },
+    "display": {
+        "alpha": 1.0,
+        "beta": 0.0
+    },
+    "worm": {
+        "model path": "C:\\WormWatcher\\NeuralNets\\model_2023-10-07_03-45-06_resnet50_2classes_10epochs_10Done_AggWorms3a.pth",
+        "object conf thresh": null,
+        "pix conf thresh": 0.22,
+        "overlap thresh": 0.55,
+        "overlap erode size": 7,
+        "touch dilate size": 7,
+        "clump thresh": 0.001,
+        "min object area": 80,
+        "target mean": null,
+        "show timing": false,
+        "show worm segmentation images": false
+    }
+}

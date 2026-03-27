@@ -1,0 +1,53 @@
+{
+    "plots": {
+        "groups": {
+            "control": [
+                1,
+                2,
+                5,
+                6,
+                9
+            ],
+            "condition 1": [
+                3,
+                4,
+                7,
+                12
+            ]
+        },
+        "sheets": [
+            "Lawn dist",
+            "N worms"
+        ],
+        "median kernel size": 9,
+        "time unit": "sec"
+    },
+    "plate": {
+        "analyze fluorescence frames": true,
+        "segment wells in first frame only": true,
+        "paths": {
+            "dark field": "H:/Tau worm mask RCNN/Model 3 - worms aggregation/Hand scored test data/Aggregation Test Set",
+            "fluo": "H:/Tau worm mask RCNN/Model 3 - worms aggregation/Hand scored test data/Aggregation Test Set"
+        },
+        "Hough circles": {
+            "blur": 11,
+            "sensitivity": 14,
+            "canny thresh": 20,
+            "well diameter (pixels)": 640
+        },
+        "N wells": 12,
+        "enforce well count": true,
+        "main path key": "fluo"
+    },
+    "worm": {
+        "model path": "C:\\WormWatcher\\NeuralNets\\model_2022-02-16_23-44-04_resnet50_2classes_30epochs_30Done_FluoWorms.pth",
+        "object conf thresh": 0.1,
+        "pix conf thresh": 0.7,
+        "overlap thresh": 0.8,
+        "clump thresh": 0.001,
+        "min object area": 200,
+        "target mean": 65,
+        "show timing": false,
+        "show worm segmentation images": false
+    }
+}

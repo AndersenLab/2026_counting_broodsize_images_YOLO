@@ -1,0 +1,42 @@
+{
+   "activity curve options": {
+      "Median Filter (T/F)": false,
+      "Session act. percentile (0=mean)": 0
+   },
+   "None": {},
+   "quality filters": {
+      "Min days (d)": 25,
+      "Initial WF (min)": 0.03,
+      "Initial WF (max)": 0.15,
+      "Check day for % remain": 10,
+      "% remain (min)": 50,
+      "% remain (max)": 120,
+      "zero level": 10,
+      "minimum activity peak": 500
+   },
+   "plot Tx params": {
+      "Tx Level [0,1]": 0.99,
+      "Font size": 20,
+      "Font angle": 0,
+      "Apply auto-censor (T/F)": true
+   },
+   "plot Act params": {
+      "Total act. timepoint (d)": 100,
+      "Font size": 20,
+      "Font angle": 0,
+      "Apply auto-censor (T/F)": true
+   },
+   "plot Escaping params": {
+      "Font size": 20,
+      "Font angle": 0
+   },
+   "export csv params": {
+      "Tx 1": 0.99,
+      "Tx 2": 0.82,
+      "Total act. timepoint (d)": 100,
+      "Apply auto-censor (T/F)": true
+   },
+   "plot swim data": {
+      "fps": 20
+   }
+}

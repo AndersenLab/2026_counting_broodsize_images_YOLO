@@ -1,0 +1,28 @@
+{
+  "_comment": "Configuration file for consolidateCVATDatasets.py",
+  "_required_fields": ["cvat_dataset_folders", "output_images_dir"],
+  "_optional_fields": ["output_json_file", "class_name", "tile_size", "tile_overlap", "max_image_size_for_tiling"],
+  
+  "cvat_dataset_folders": [
+    "C:\\path\\to\\dataset1",
+    "C:\\path\\to\\dataset2",
+    "C:\\path\\to\\dataset3"
+  ],
+  "output_images_dir": "C:\\path\\to\\output\\consolidated_images",
+  "output_json_file": "consolidated_annotations.json",
+  "class_name": "worm",
+  "tile_size": 512,
+  "tile_overlap": 0.1,
+  "max_image_size_for_tiling": 512,
+  
+  "_field_descriptions": {
+    "cvat_dataset_folders": "List of folders containing CVAT XML datasets. Each folder should have one XML file and images (either in folder or subfolder).",
+    "output_images_dir": "Output directory where consolidated images will be saved.",
+    "output_json_file": "Output VGG JSON filename. If just a filename (no path), will be saved in output_images_dir. Default: 'consolidated_annotations.json'",
+    "class_name": "Name of the annotation class. Default: 'worm'",
+    "tile_size": "Size of each tile in pixels when splitting large images. Default: 512",
+    "tile_overlap": "Overlap ratio between tiles (0.0 to 1.0). Default: 0.1 (10% overlap)",
+    "max_image_size_for_tiling": "Images larger than this dimension will be split into tiles. Default: 512"
+  }
+}
+

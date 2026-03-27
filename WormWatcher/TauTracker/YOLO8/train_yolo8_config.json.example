@@ -1,0 +1,60 @@
+{
+  "_comment": "Configuration file for train_yolo8.py",
+  "_example_paths": {
+    "train_json": "I:\\Tau worm mask RCNN\\Model 4c - combinaed 4a+4b\\Original\\merged_labels_20251207_234814.json",
+    "train_images": "I:\\Tau worm mask RCNN\\Model 4c - combinaed 4a+4b\\Original\\DatasetImages",
+    "val_json": "E:\\Nikita JHU Plates\\Validation only data\\Data for Labeling\\merged_labels_20251109_221604.json",
+    "val_images": "E:\\Nikita JHU Plates\\Validation only data\\Data for Labeling"
+  },
+  
+  "train_json": "path/to/train_annotations.json",
+  "train_images": "path/to/train_images",
+  "val_json": null,
+  "val_images": null,
+  "yolo_dataset": null,
+  
+  "model_size": "n",
+  "task": "detect",
+  "pretrained": true,
+  "resume": null,
+  
+  "epochs": 1000,
+  "batch_size": 16,
+  "imgsz": 512,
+  "learning_rate": 0.01,
+  "device": null,
+  "workers": 3,
+  "skip_final_val": false,
+  
+  "augment": true,
+  "augmentation_per_image": 3,
+  
+  "output_dir": null,
+  "project": "worm_segmentation",
+  "name": "yolov8_seg",
+  
+  "_field_descriptions": {
+    "train_json": "Path to training annotation file (VGG JSON or CVAT XML). Supports both formats.",
+    "train_images": "Path to training images directory.",
+    "val_json": "Path to validation annotation file (VGG JSON or CVAT XML). Set to null to auto-split training data.",
+    "val_images": "Path to validation images directory. Set to null to auto-split training data.",
+    "yolo_dataset": "Path to existing YOLO format dataset. Set to null to convert from VGG/CVAT.",
+    "model_size": "Model size: 'n' (nano), 's' (small), 'm' (medium), 'l' (large), 'x' (xlarge).",
+    "task": "Task mode: 'seg' for segmentation (masks), 'detect' for detection (bounding boxes).",
+    "pretrained": "Use pretrained COCO weights (true/false).",
+    "resume": "Path to checkpoint to resume from. Set to null for new training.",
+    "epochs": "Number of training epochs.",
+    "batch_size": "Batch size for training.",
+    "imgsz": "Image size for training (e.g., 512, 640).",
+    "learning_rate": "Initial learning rate.",
+    "device": "Device to use: null (auto), 'cuda', 'cpu', or '0' for specific GPU.",
+    "workers": "Number of data loading workers (0-8, lower if memory issues).",
+    "skip_final_val": "Skip final validation if memory issues (true/false).",
+    "augment": "Enable YOLO's built-in augmentation (true/false).",
+    "augmentation_per_image": "Number of augmented versions to create per original image during dataset conversion (0 = no augmentation).",
+    "output_dir": "Output directory for training artifacts. Set to null to auto-set under train_images.",
+    "project": "Project name (subfolder name).",
+    "name": "Experiment name (subfolder name)."
+  }
+}
+

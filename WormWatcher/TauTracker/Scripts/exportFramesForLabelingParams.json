@@ -1,0 +1,43 @@
+{
+    "export":{
+        "parent": "E:/Tau worm mask RCNN/Model 3 - worms aggregation/Original data",
+        "pout": "E:/Tau worm mask RCNN/Model 3 - worms aggregation/Data for labeling",        
+        "frames per dataset": 4,
+        "show well segmentation": false,
+        "target mean": 128,
+        "blur": {
+            "enable": false,
+            "kernel size": 5,
+            "sigma": 3
+        }
+    },
+    "plate": {
+        "paths": {
+            "dark field": "to be filled in"
+        },
+        "Hough circles": {
+            "blur": 11,
+            "sensitivity": 14,
+            "canny thresh": 20,
+            "well diameter (pixels)": 1150
+        },
+        "lawn":{
+            "enable": false,
+            "relative size": 0.35
+        },
+        "N wells": 6,
+        "enforce well count": true,
+        "main path key": "fluo"
+    },
+    "worm": {
+        "model path": "C:\\WormWatcher\\NeuralNets\\model_2022-02-16_23-44-04_resnet50_2classes_30epochs_30Done_FluoWorms.pth",
+        "object conf thresh": 0.1,
+        "pix conf thresh": 0.7,
+        "overlap thresh": 0.8,
+        "clump thresh": 0.001,
+        "min object area": 200,
+        "target mean": 128,
+        "show timing": false,
+        "show worm segmentation images": false
+    }
+}

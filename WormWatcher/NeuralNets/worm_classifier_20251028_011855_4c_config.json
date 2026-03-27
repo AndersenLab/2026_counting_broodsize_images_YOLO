@@ -1,0 +1,11 @@
+{
+  "window_size": 64,
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "num_epochs": 50,
+  "dropout_rate": 0.3,
+  "device": "auto",
+  "model_save_path": "./models/",
+  "early_stopping_patience": 10,
+  "confidence_threshold": 0.5
+}
