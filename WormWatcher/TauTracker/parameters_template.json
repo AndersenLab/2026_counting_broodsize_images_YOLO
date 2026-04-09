@@ -1,0 +1,89 @@
+{
+    "data output": {
+        "x axis": "fname",
+        "pages": [
+            "N worms",
+            "worm X positions",
+            "worm Y positions",
+            "N touching",
+            "N alone",
+            "Neighbor dist",
+            "fraction touching",
+            "fraction touching (from alone)"
+        ],
+        "x axis options": [
+            "time",
+            "fname"
+        ],
+        "pages options": [
+            "N worms",
+            "Neighbor dist",
+            "fraction touching",
+            "N touching",
+            "N alone",
+            "fraction touching (from alone)",
+            "worm X positions",
+            "worm Y positions",
+            "N worms confirmed",
+            "N worms rejected",
+            "Secondary confidence avg"
+        ]
+    },
+    "plots": {
+        "groups": {
+            "single plate": [
+                1
+            ]
+        },
+        "sheets": [
+            "N worms"
+        ],
+        "median kernel size": 9,
+        "time unit": "sec"
+    },
+    "plate": {
+        "analyze fluorescence frames": false,
+        "segment wells in first frame only": false,
+        "paths": {
+            "dark field": "IMAGE_FOLDER",
+            "fluo": "IMAGE_FOLDER"
+        },
+        "N wells": 1,
+        "Ideal worms per well": 50,
+        "Hough circles": {
+            "blur": 11,
+            "sensitivity": 15,
+            "canny thresh": 20,
+            "well diameter (pixels)": 3450,
+            "well spacing (fraction of diameter)": 1.0,
+            "dsfactor": 0.1,
+            "eliminate extra circles": true
+        },
+        "enforce well count": false,
+        "lawn": {
+            "enable": false
+        },
+        "save well segmentation images": false,
+        "main path key": "fluo"
+    },
+    "display": {
+        "alpha": 1.0,
+        "beta": 0.0
+    },
+    "worm": {
+        "model path": "/scratch/eande106/WormWatcher/NeuralNets/yolo8_2026-02-16_detectmode.pt",
+        "task": "detect",
+        "overlap preference": "confidence",
+        "object conf thresh": CONFIDENCE_THRESHOLD,
+        "pix conf thresh": 0.5,
+        "overlap thresh": 0.5,
+        "overlap erode size": 7,
+        "touch dilate size": 7,
+        "clump thresh": 0.001,
+        "min object area": 80,
+        "sliding window size": 512,
+        "target mean": null,
+        "show timing": false,
+        "show worm segmentation images": false
+    }
+}
