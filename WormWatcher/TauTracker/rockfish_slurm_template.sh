@@ -15,6 +15,6 @@ mamba activate /data/eande106/software/conda_envs/wormwatcher
 BATCHES=($(cat BATCH_LIST))
 BATCH=${BATCHES[${SLURM_ARRAY_TASK_ID}]}
 
-cd /data/eande106/software/WormWatcher/TauTracker
+cd /data/eande106/software/2026_counting_broodsize_images_YOLO/WormWatcher/TauTracker
 python3.9 AnalyzePositionOnSinglePlate_nogui.py ${BATCH} ${BATCH}.json
 
