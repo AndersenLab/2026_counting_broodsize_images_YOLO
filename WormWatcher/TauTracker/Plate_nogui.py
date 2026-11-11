@@ -8,12 +8,15 @@ import cv2
 import numpy as np
 import os
 from OpenCV_Helpers import *
+from pathlib import Path
 
 # Search for RCNN_Segment (different directories for repo vs deployment environments)
 import sys
-sys.path.insert(1, os.path.realpath('..\ActivityAnalyzer\ActivityAnalyzer\mask_rcnn')) # Autogans
-sys.path.insert(1, os.path.realpath('..\WWAnalyzerPy\mask_rcnn')) #Deployed systems (WWUpdater.nsi)
-sys.path.insert(1, os.path.realpath('../WWAnalyzerPy/mask_rcnn')) #Deployed systems (WWUpdater.nsi)
+
+parent_dir = str(Path(__file__).resolve().parent.parent)
+sys.path.insert(1, os.path.realpath(parent_dir + '\ActivityAnalyzer\ActivityAnalyzer\mask_rcnn')) # Autogans
+sys.path.insert(1, os.path.realpath(parent_dir + '\WWAnalyzerPy\mask_rcnn')) #Deployed systems (WWUpdater.nsi)
+sys.path.insert(1, os.path.realpath(parent_dir + '/WWAnalyzerPy/mask_rcnn')) #Deployed systems (WWUpdater.nsi)
 from RCNN_Segment import RCNN_Segment
 from RCNN_Helper import loadRCNN
 from scipy.optimize import minimize
