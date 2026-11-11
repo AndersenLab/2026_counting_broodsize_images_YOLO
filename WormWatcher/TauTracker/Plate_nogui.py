@@ -13,6 +13,7 @@ from OpenCV_Helpers import *
 import sys
 sys.path.insert(1, os.path.realpath('..\ActivityAnalyzer\ActivityAnalyzer\mask_rcnn')) # Autogans
 sys.path.insert(1, os.path.realpath('..\WWAnalyzerPy\mask_rcnn')) #Deployed systems (WWUpdater.nsi)
+sys.path.insert(1, os.path.realpath('../WWAnalyzerPy/mask_rcnn')) #Deployed systems (WWUpdater.nsi)
 from RCNN_Segment import RCNN_Segment
 from RCNN_Helper import loadRCNN
 from scipy.optimize import minimize
